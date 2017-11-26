@@ -28,6 +28,41 @@
 
 .navigation .brand {
 	margin-right: auto;
+	display: flex;
+	flex-direction: row;
+
+	.social-media-icons {
+		list-style: none;
+		margin: 0;
+		margin-left: 15px;
+		padding: 0;
+		display: flex;
+		align-self: center;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: flex-end;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+
+		a {
+			margin: 0px 10px;
+			height: 100%;
+			display: flex;
+			align-items: flex-end;
+			color: #424242;
+
+			li {
+				height: 20px;
+				width: 20px;
+
+				.fa {
+					font-size: 1.8em;
+				}
+			}
+		}
+	}
 
 	h2.brand-text {
 		color: #424242;
