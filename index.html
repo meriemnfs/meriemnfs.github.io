@@ -8,8 +8,11 @@ footer : 'inverted hidden transition'
 </div>
 
 <script>
-    window.addEventListener('mousemove', function(e){
+    var showNavigation = function(e){
         document.getElementsByClassName('navigation')[0].className = 'navigation inverted transition';
         document.getElementsByClassName('footer')[0].className = 'footer inverted transition';
-    });
+    }
+
+    window.addEventListener('mousemove', showNavigation);
+    window.addEventListener('touchStart', showNavigation);
 </script>
