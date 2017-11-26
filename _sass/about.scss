@@ -1,0 +1,43 @@
+.about-text-wrapper {
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height:100%;
+    width:50%;
+
+    h1 {
+        align-self:center;
+        margin:50px 0;
+        width:70%;
+        font-size:24px;
+        font-weight:400;
+    }
+
+    p {
+        font-family:'Open sans', sans-serif;
+        font-weight:300;
+        max-width:70%;
+        margin:50px auto;
+        font-size:20px;
+        line-height:1.8em;
+    }
+}
+
+.about-picture-wrapper {
+    height:100%;
+    flex-grow:2;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+
+    img {
+        opacity:0.9;
+        max-width:100%;
+        height:auto;
+    }
+
+
+}

@@ -1,0 +1,35 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        {% include head.html %}
+        <script src="/assets/javascript/gallery.js"></script>
+    </head>
+
+    <body>
+        {% include header.html %}
+        <div class="content-wrapper">
+            <div class="gallery-wrapper">
+                {% for image in site.static_files %}
+                    {% if image.path contains page.url %}
+                        <div onclick="toggleExpand(this)" class="gallery-thumbnail">
+                            <img src="{{image.path}}" />
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                {% for image in site.static_files %}
+                    {% if image.path contains page.url %}
+                        <div onclick="toggleExpand(this)" class="gallery-thumbnail">
+                            <img src="{{image.path}}" />
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
+</html>

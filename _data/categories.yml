@@ -1,0 +1,11 @@
+- title: 'landscapes'
+  href: '/landscapes'
+  titlePlace: 3
+
+- title: 'portraits'
+  href: '/portraits'
+  titlePlace: 4
+
+- title: 'products'
+  href: '/products'
+  titlePlace: 5

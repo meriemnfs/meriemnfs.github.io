@@ -1,0 +1,117 @@
+---
+# Front matter for Jekyll
+---
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import "navigation";
+@import "footer";
+@import "work";
+@import "about";
+@import "contact";
+@import "font-awesome/font-awesome";
+
+body {
+    padding:0;
+    margin:0;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-weight:300;
+    background-color:#f7f7f7;
+    height:100vh;
+}
+
+.hidden {
+    opacity:0;
+}
+
+.transition {
+    transition:1s ease-in;
+}
+
+.inverted {
+    color:#f7f7f7!important;
+
+    a {
+        color:#f7f7f7!important;
+    }
+
+    h2 {
+        color:#f7f7f7!important;
+    }
+
+    #mobile-menu span {
+        background:#f7f7f7!important;
+    }
+
+    .social-media-list {
+        a {
+            background-color:#f7f7f7!important;
+
+            .fa {
+                color:#424242;
+            }
+        }
+    }
+}
+
+.cover-image-wrapper {
+    top:0;
+    right:0;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    position:absolute;
+    background-image:url('/assets/images/cover-image.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-wrapper {
+    margin:0px 50px;
+    display:flex;
+    height:70%;
+    max-width:100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gallery-wrapper {
+    text-align:center;
+    overflow:scroll;
+    height:100%;
+    width:100%;
+}
+
+.gallery-thumbnail {
+    display:inline-block;
+    width:230px;
+    height:230px;
+    overflow:hidden;
+    margin:15px 15px;
+
+
+    img {
+        width:100%;
+        height:auto;
+    }
+}
+
+.gallery-expanded {
+    position:absolute;
+    z-index:1000;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    background-color:rgba(0,0,0,0.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width:auto;
+        height:auto;
+        max-height:95%;
+
+    }
+}

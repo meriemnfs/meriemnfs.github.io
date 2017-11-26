@@ -1,0 +1,29 @@
+<div class="navigation {{page.navigation}}">
+    <div class="brand">
+        <h2 class="brand-text"><a href="/">Meriem Rogmann</a></h2>
+    </div>
+    <div id="nav" class="nav">
+        <div onclick="toggleOpen()" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            {% for node in site.data.navigation %}
+                {% if node.href == page.url %}
+                    <li class="active"><a href="{{node.href}}">{{node.title}}</a></li>
+                {% else %}
+                    <li><a href="{{node.href}}">{{node.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+    <script>
+        var toggleOpen = function() {
+            document.getElementById('mobile-menu').classList.toggle('open');
+            document.getElementsByClassName('nav-menu')[0].classList.toggle('open');
+        }
+
+    </script>
+</div>

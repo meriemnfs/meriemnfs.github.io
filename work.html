@@ -1,0 +1,26 @@
+---
+layout: page
+permalink: /work
+---
+
+<div class="content-wrapper">
+    {% for category in site.data.categories %}
+        <div class="category-wrapper">
+            <a href="{{category.href}}"><div class="category-content-wrapper">
+                {% for num in (1..category.titlePlace) %}
+                    <div class="thumbnail">
+                        <img src="/assets/images/portraits/portrait_{{num}}.jpg" />
+                    </div>
+                {% endfor %}
+                <div class="thumbnail">
+                    <h3 class="category-title">{{category.title}}</h3>
+                </div>
+                {% for num in (category.titlePlace..9) offset:2 %}
+                    <div class="thumbnail">
+                        <img src="/assets/images/portraits/portrait_{{num}}.jpg" />
+                    </div>
+                {% endfor %}
+            </div></a>
+        </div>
+    {% endfor %}
+</div>
