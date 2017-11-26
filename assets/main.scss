@@ -69,12 +69,14 @@ body {
 .content-wrapper {
     margin:0px 50px;
     display:flex;
-    min-height:70%;
+    height:70%;
     max-width:100%;
     justify-content: space-around;
     align-items: center;
 
     @media (max-width: 767px) {
+        min-height:70%;
+        height:auto;
         flex-wrap:wrap;
         margin: 0 10px;
     }
