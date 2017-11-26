@@ -24,7 +24,7 @@ body {
 }
 
 .transition {
-    transition:1s ease-in;
+    transition: opacity 1s ease-in;
 }
 
 .inverted {
@@ -69,10 +69,16 @@ body {
 .content-wrapper {
     margin:0px 50px;
     display:flex;
-    height:70%;
+    min-height:70%;
     max-width:100%;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width: 767px) {
+        flex-wrap:wrap;
+        margin: 0 10px;
+    }
+
 }
 
 .gallery-wrapper {
@@ -97,7 +103,7 @@ body {
 }
 
 .gallery-expanded {
-    position:absolute;
+    position:fixed;
     z-index:1000;
     left:0;
     top:0;
@@ -107,6 +113,7 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
+    overflow:hidden;
 
     img {
         width:auto;
