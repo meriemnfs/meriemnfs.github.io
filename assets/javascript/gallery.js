@@ -17,7 +17,7 @@ function toggleExpand(element) {
 	}
 }
 
-window.onkeyup = function(e) {
+window.onkeyup = function (e) {
 	var key = e.keyCode ? e.keyCode : e.which;
 
 	if (key == 27) {

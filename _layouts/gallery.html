@@ -13,7 +13,7 @@ layout: compress
     <body>
         {% include header.html %}
         <div class="content-wrapper">
-            <div class="gallery-wrapper">
+            <div id="gallery-wrapper" class="gallery-wrapper">
                 {% for image in site.static_files %}
                     {% if image.path contains page.url %}
                         <div onclick="toggleExpand(this)" class="gallery-thumbnail">
